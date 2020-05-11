@@ -3,7 +3,7 @@
 
 from time import time
 
-from konlpy.tag import Twitter
+from konlpy.tag import Okt
 from konlpy.utils import pprint
 from nltk import collocations
 
@@ -24,7 +24,7 @@ def read_data(csvfile):
 def tag_words(sentences):
     tagged_set = []
     for sentence in sentences:
-        tagged_words = Twitter().pos(sentence)
+        tagged_words = Okt().pos(sentence)
         tagged_set.extend(tagged_words)
     return tagged_set
     

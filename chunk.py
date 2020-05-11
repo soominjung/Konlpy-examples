@@ -3,10 +3,14 @@
 
 from konlpy.tag import Okt
 import nltk
+import argparse
+
+parser = argparse.ArgumentParser(description='Chunk an input sentence')
+parser.add_argument('sentence', type=str, help='Sentence to chunk')
+arg=parser.parse_args()
 
 # POS tag a sentence
-sentence = u'만 6세 이하의 초등학교 취학 전 자녀를 양육하기 위해서는'
-words = Okt().pos(sentence)
+words = Okt().pos(arg.sentence)
 
 # Define a chunk grammar, or chunking rules, then chunk
 grammar = """
@@ -14,8 +18,8 @@ NP: {<N.*>*<Suffix>?}   # Noun phrase
 VP: {<V.*>*}            # Verb phrase
 AP: {<A.*>*}            # Adjective phrase
 """
-parser = nltk.RegexpParser(grammar)
-chunks = parser.parse(words)
+regexparser = nltk.RegexpParser(grammar)
+chunks = regexparser.parse(words)
 print("# Print whole tree")
 print(chunks.pprint())
 
