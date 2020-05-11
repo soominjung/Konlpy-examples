@@ -1,15 +1,19 @@
 Konlpy-examples
 ==============
 Example codes for Konlpy package
+
 All codes are modified from konlpy examples
+
 Original code: https://github.com/konlpy
 
 test/test.py
 -------
 Test code for Konlpy taggers.
+
 Modiffied to run in Python 3
 
-Okt and Twitter on results(morph*.csv) are same but duplicated due to name change(Twitter->Okt).
+
+*Okt and Twitter on results(morph*.csv) are same but duplicated due to name change(Twitter->Okt).
 ```
 python3 test.py
 ```
@@ -38,4 +42,5 @@ python3 collocation.py
 data/ratings_test.txt
 -----
 From Naver sentiment movie corpus v1.0
+
 https://github.com/e9t/nsmc
