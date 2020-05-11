@@ -13,7 +13,7 @@ Test code for Konlpy taggers.
 Modiffied to run in Python 3
 
 
-*Okt and Twitter on results(morph*.csv) are same but duplicated due to name change(Twitter->Okt).
+*Okt and Twitter on results(morph\*.csv) are same but duplicated due to name change(Twitter->Okt).
 ```
 python3 test.py
 ```
